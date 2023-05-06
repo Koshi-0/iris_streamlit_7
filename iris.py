@@ -18,7 +18,7 @@ df.loc[df['target'] == 1, 'target'] = 'versicolor'
 df.loc[df['target'] == 2, 'target'] = 'virginica'
 
 # 予測モデルの構築
-x = iris.data[:,[0, 2]]
+x = iris.data[:, [0, 2]]
 y = iris.target
 
 # ロジスティック回帰
@@ -29,11 +29,11 @@ clf.fit(x, y)
 st.sidebar.header('Input features')
 
 sepalValue = st.sidebar.slider('sepal length (cm)', min_value=0.0, max_value=10.0, step=0.1)
-petalValue = st.sidebar.slider('pepal length (cm)', min_value=0.0, max_value=10.0, step=0.1)
+petalValue = st.sidebar.slider('petal length (cm)', min_value=0.0, max_value=10.0, step=0.1)
 
 # メインパネル
 st.title('Iris Classifier')
-st.write('## Input value')
+st.write('## Input Value')
 
 # インプットデータ（1行のデータフレーム）
 value_df = pd.DataFrame([],columns=['data','sepal length (cm)','petal length (cm)'])
