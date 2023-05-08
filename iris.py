@@ -51,7 +51,7 @@ pred_df = pd.DataFrame(pred_probs,columns=['setosa','versicolor','virginica'],in
 st.write('## Prediction')
 st.write(pred_df)
 
-# 予測結果の出力に
+# 予測結果の出力
 name = pred_df.idxmax(axis=1).tolist()
 st.write('## Result')
 st.write('このアイリスはきっと',str(name[0]),'です!')
